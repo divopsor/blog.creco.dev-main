@@ -6,7 +6,6 @@ module.exports = (phase, { defaultConfig }) => {
     // ...defaultConfig,
     reactStrictMode: true,
     swcMinify: true,
-    basePath: "/main",
     typescript: {
       // !! WARN !!
       // Dangerously allow production builds to successfully complete even if
@@ -19,16 +18,6 @@ module.exports = (phase, { defaultConfig }) => {
       // your project has ESLint errors.
       ignoreDuringBuilds: true,
     },
-    redirects: process.env.LOCAL === 'true' ? async () => {
-      return [
-        {
-          source: '/',
-          destination: '/main',
-          permanent: false,
-          basePath: false,
-        }
-      ];
-    }: null,
     rewrites: process.env.LOCAL === 'true' ? async () => {
       return [
         {
