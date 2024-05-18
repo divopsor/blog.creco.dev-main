@@ -2,6 +2,9 @@
 
 import { Colors, ResponsivePage, Spacing } from '@divops-packages/blog-creco-dev';
 import Link from 'next/link';
+import { Header } from '../components/Header';
+import { Logo } from '../components/Logo';
+import { Divider } from '../components/Divider';
 
 export const HomePage = () => {
   return (
@@ -11,26 +14,42 @@ export const HomePage = () => {
       fontColor={Colors.SoftWhite}
       desktopPageWidth="840px"
     >
-      <Spacing size={12} />
-      <h1>Creco's Blog</h1>
-      <Spacing size={60} />
+      <Header>
+        <Logo />
+      </Header>
+
+      {/*  필요 없는 부분 제거 */}
+
+      {/* <Spacing size={20} />
+
+      <p style={{ fontSize: '60px', fontWeight: 'bold' }}>Welcome</p> */}
+
+      {/* <Spacing size={14} />
+
+      <p style={{ fontSize: '20px', color: 'grey', fontWeight: 'light' }}>Creco</p> */}
+
+      {/* <Spacing size={20} /> */}
+
+      <Divider />
+
+      <Spacing size={40} />
 
       <ul>
         <li>
           <Link href="/post" className='clickable'>
-            <h4>Post 보러가기</h4>
+            <h2>Post</h2>
           </Link>
         </li>
-        <Spacing size={20} />
+        <Spacing size={60} />
         <li>
           <Link href="/ps" className='clickable'>
-            <h4>Problem Solving 보러가기</h4>
+            <h2>Problem Solving</h2>
           </Link>
         </li>
-        <Spacing size={20} />
+        <Spacing size={60} />
         <li>
           <Link href="/doodle" className='clickable'>
-            <h4>낙서 보러가기</h4>
+            <h2>Doodle</h2>
           </Link>
         </li>
       </ul>

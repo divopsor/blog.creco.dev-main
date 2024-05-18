@@ -19,7 +19,12 @@ export default function App({ Component, pageProps }: AppProps) {
       <CrecoApp queryClient={queryClient}>
         <Component {...pageProps} />
       </CrecoApp>
-      <style global jsx>{cssText}</style>
+      <style global jsx>{`
+          ${cssText}
+          p {
+            font-family: Inter, ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+          }
+      `}</style>
     </>
   )
 }
