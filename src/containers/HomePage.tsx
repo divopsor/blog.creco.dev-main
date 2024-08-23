@@ -42,14 +42,8 @@ export const HomePage = () => {
         </li>
         <Spacing size={60} />
         <li>
-          <Link href="/ps" className='clickable'>
-            <h2>Problem Solving</h2>
-          </Link>
-        </li>
-        <Spacing size={60} />
-        <li>
-          <Link href="/doodle" className='clickable'>
-            <h2>Doodle</h2>
+          <Link href="/coffee-chat" className='clickable'>
+            <h3>FEConf2024 커피챗 신청하러가기</h3>
           </Link>
         </li>
       </ul>
