@@ -43,7 +43,7 @@ export const HomePage = () => {
         <Spacing size={60} />
         <li>
           <Link href="/coffee-chat" className='clickable'>
-            <h4>FEConf2024 커피챗 신청하러가기</h4>
+            <h3>FEConf2024 커피챗 신청하러가기</h3>
           </Link>
         </li>
       </ul>
